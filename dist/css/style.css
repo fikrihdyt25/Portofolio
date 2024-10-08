@@ -201,6 +201,17 @@
     margin-right: 0;
     margin-inline: 10px;
   }
+  
+  .projects .row, .Editing.video .row, .Gallery .row {
+    flex-direction: row;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .projects .col, .Editing.video .col, .Gallery .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
