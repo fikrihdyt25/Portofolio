@@ -2,6 +2,34 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background-color: #ffffff;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #333;
+  margin: 0 0.5rem;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #198754;
+}
+
+.btn-outline-success {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+}
+
+.btn-outline-success:hover {
+  background-color: #218838;
+}
+
 .header {
   background-color: whitesmoke;
 }
@@ -124,30 +152,60 @@
 }
 
 .projects {
-  background-color: whitesmoke;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  padding-inline: 10px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  background-color: #f0f0f0;
+  border-radius: 20px;
 }
 
 .projects h1 {
-  color: #120f30;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 3rem;
 }
 
-.projects .row .col img {
-  width: 100%;
-  height: auto;
+.card {
+  height: 100%;
+  background-color: #e0e0e0;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 200px;
   object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
-@media screen and (max-width: 768px) {
-  .projects .row .col {
-    margin-bottom: 20px;
-  }
-  
-  .projects .row .col img {
-    max-height: 200px;
-  }
+.card-title {
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  color: #555555;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  border-color: #28a745;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
 }
 
 .footer {
@@ -165,6 +223,11 @@
 
 .copyright {
   background-color: #b9b4c7;
+}
+
+.copyright p {
+  margin-bottom: 0;
+  padding: 1rem 0;
 }
 
 .container-loader {
@@ -213,22 +276,28 @@
     margin-right: 0;
     margin-inline: 10px;
   }
-  
-  .projects .row {
-    flex-direction: row;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
-
-  .projects .col {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 }
 
 @media screen and (max-width: 768px) {
+  .btn-outline-success {
+    padding: 0.5rem 1.25rem;
+    margin-top: 1rem;
+  }
+  
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+
   .about .row .col .desc {
     font-size: 14px;
+  }
+
+  .projects .row .col {
+    margin-bottom: 20px;
+  }
+  
+  .projects .row .col img {
+    max-height: 200px;
   }
 }
 
